@@ -35,16 +35,17 @@ public class LabTest1 {
     void sortFunction3(int unsorted[])
     {
         int ln = unsorted.length;
-        for (int i = 1; i < ln; ++i) {
+        for (int i = 1; i < ln-1; ++i) {
             int item = unsorted[i];
             int j = i + 1; 
             
             while (j > 0 && unsorted[j] > item ) { 
-                unsorted[j + 1] = unsorted[j];// Tries to access array length + 1
+                int t = unsorted[j];
+                unsorted[j] = unsorted[j-1];// Tried to access array length + 1
                 j = j - 1;
             }
             
-            unsorted[j + 1] = item;
+            unsorted[j] = item;
         }
     }
      
