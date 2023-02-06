@@ -1,8 +1,15 @@
 package labtest1;
 
-
+/**
+ * A class that sorts given numbers in ascending order.
+ * @since 2023-02-06
+ * @author kyure
+ */
 public class LabTest1 {
-    
+    /**
+     * 
+     * @param unsorted 
+     */
     void sortFunction1(int unsorted[])
     {
         int len = unsorted.length;
@@ -17,7 +24,10 @@ public class LabTest1 {
             unsorted[i] = t;
         }
     }
- 
+    /**
+     * 
+     * @param unsorted 
+     */
     void sortFunction2(int unsorted[])
     {
         int length = unsorted.length;
@@ -31,7 +41,10 @@ public class LabTest1 {
                 }
         
     }
-     
+     /**
+      * 
+      * @param unsorted 
+      */
     void sortFunction3(int unsorted[])
     {
         int ln = unsorted.length;
@@ -48,7 +61,10 @@ public class LabTest1 {
             unsorted[j] = item;
         }
     }
-     
+     /**
+      * 
+      * @param arr 
+      */
     void printArray(int arr[])
     {
         int n = arr.length;
@@ -57,7 +73,11 @@ public class LabTest1 {
         System.out.println();
     }
     
-    
+    /**
+     * A method that calls 3 different ways of sorting numbers.
+     * @since 
+     * @param args 
+     */
     public static void main(String[] args) {
         LabTest1 obj = new LabTest1();
         /*
