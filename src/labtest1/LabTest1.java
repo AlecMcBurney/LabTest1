@@ -48,17 +48,16 @@ public class LabTest1 {
     void sortFunction3(int unsorted[])
     {
         int ln = unsorted.length;
-        for (int i = 1; i < ln-1; ++i) {
+        for (int i = 1; i < ln; ++i) {
             int item = unsorted[i];
-            int j = i + 1; 
+            int j = i - 1; //Changed to decrement instead of increment.
             
-            while (j > 0 && unsorted[j] > item ) { 
-                int t = unsorted[j];
-                unsorted[j] = unsorted[j-1];// Tried to access array length + 1
+            while (j >= 0 && unsorted[j] > item ) { 
+                unsorted[j+1] = unsorted[j];// Tried to access array length + 1
                 j = j - 1;
             }
             
-            unsorted[j] = item;
+            unsorted[j+1] = item;
         }
     }
      /**
@@ -80,19 +79,19 @@ public class LabTest1 {
      */
     public static void main(String[] args) {
         LabTest1 obj = new LabTest1();
-        /*
+        
         int unsorted[] = {64,25,12,22,11}; // should output 11 12 22 25 64
         obj.sortFunction1(unsorted);
         System.out.println("Sorted array1 : ");
         obj.printArray(unsorted);
-        */
         
-        /*
+        
+        
         int unsorted2[] = {64,25,12,22,11}; // Originally just moves 12 to the beginning of the array.
         obj.sortFunction2(unsorted2);
         System.out.println("Sorted array2 : ");
         obj.printArray(unsorted2);
-        */
+        
         
         
         int unsorted3[] = {64,25,12,22,11};
